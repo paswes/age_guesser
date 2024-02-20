@@ -14,7 +14,7 @@ Guess your age by your name.
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/MyApp.git
+    git clone https://github.com/paswes/age_guesser.git
     ```
 
 2. **Navigate to the project directory:**
