@@ -1,6 +1,6 @@
 # Age Guesser (NEON Coding Challenge)
 
-Guess your age by your name.
+Guess your age by name.
 
 ## Getting Started
 
