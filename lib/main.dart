@@ -1,9 +1,10 @@
-import 'package:age_guesser/cubit/age_cubit.dart';
-import 'package:age_guesser/pages/home_page.dart';
-import 'package:age_guesser/api/age_api.dart';
+import 'package:age_guesser/pages/guess_age_page.dart';
+import 'package:age_guesser/modules/name_age/api/name_age_api.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'modules/name_age/cubit/name_age_cubit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocProvider(
         create: (context) => NameAgeCubit(ageApi: AgeApi()),
-        child: const HomePage(),
+        child: const GuessAgePage(),
       ),
     );
   }

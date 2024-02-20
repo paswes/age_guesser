@@ -1,10 +1,10 @@
-part of 'age_cubit.dart';
+part of 'name_age_cubit.dart';
 
 class NameAgeState {
   final Status status;
   final Exception? lastException;
   final int? age;
-  final String? name;
+  final String name;
 
   const NameAgeState._({
     required this.status,
@@ -17,7 +17,7 @@ class NameAgeState {
         status: Status.initial,
         lastException: null,
         age: null,
-        name: null,
+        name: '',
       );
 
   NameAgeState copyWith({
