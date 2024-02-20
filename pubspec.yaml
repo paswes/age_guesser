@@ -1,5 +1,5 @@
 name: age_guesser
-description: Guess your age by your name.
+description: Guess your age by name.
 publish_to: 'none'
 version: 1.0.0+1
 
