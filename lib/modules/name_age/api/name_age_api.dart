@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 // ignore: constant_identifier_names
 const API_BASE = 'https://api.agify.io';
 
-class AgeApi {
+class NameAgeApi {
   Future<NameAge> getAgeByName(String name) async {
     final response = await http.get(Uri.parse('$API_BASE?name=$name'));
     if (response.statusCode == HttpStatus.ok) {

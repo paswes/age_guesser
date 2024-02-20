@@ -5,10 +5,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 part 'name_age_state.dart';
 
 class NameAgeCubit extends Cubit<NameAgeState> {
-  final AgeApi ageApi;
+  final NameAgeApi nameAgeApi;
 
   NameAgeCubit({
-    required this.ageApi,
+    required this.nameAgeApi,
   }) : super(NameAgeState.initial());
 
   final TextEditingController nameController = TextEditingController();
@@ -27,7 +27,7 @@ class NameAgeCubit extends Cubit<NameAgeState> {
     emit(state.copyWith(status: Status.loading));
     try {
       //await Future.delayed(const Duration(seconds: 2));
-      final result = await ageApi.getAgeByName(name);
+      final result = await nameAgeApi.getAgeByName(name);
       emit(state.copyWith(age: result.age, status: Status.success));
     } catch (e) {
       emit(state.copyWith(status: Status.error, lastException: Exception(e)));

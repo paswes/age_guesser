@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: BlocProvider(
-        create: (context) => NameAgeCubit(ageApi: AgeApi()),
+        create: (context) => NameAgeCubit(nameAgeApi: NameAgeApi()),
         child: const GuessAgePage(),
       ),
     );
