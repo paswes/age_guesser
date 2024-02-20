@@ -1,4 +1,5 @@
 import 'package:age_guesser/modules/name_age/cubit/name_age_cubit.dart';
+import 'package:age_guesser/modules/name_age/model/name_age.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -62,7 +63,9 @@ class SubmitButton extends StatelessWidget {
     final NameAgeState s = context.select((NameAgeCubit c) => c.state);
 
     final String name = s.name.trim();
-    final bool canSubmit = name.isNotEmpty;
+    final bool canSubmit = name.isNotEmpty &&
+        name.length >= NAME_MIN_LENGTH &&
+        name.length <= NAME_MAX_LENGTH;
 
     final ThemeData theme = Theme.of(context);
     final Color primaryColor = theme.primaryColor;
